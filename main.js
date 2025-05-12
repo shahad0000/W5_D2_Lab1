@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let form = document.getElementById("post-form");
 
   form.onsubmit = (e) => {
-    console.log("submitting......");
 
     e.preventDefault();
     const post = async () => {
@@ -62,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
           );
         } else {
           localStorage.setItem("username", username.value);
-
           post();
         }
       }
