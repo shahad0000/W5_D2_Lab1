@@ -3,6 +3,14 @@ body {
  background-color: rgb(239, 239, 239);
 }
 
+
+@media only screen and (max-width: 600px) {
+    .posts {
+        grid-template-columns:  1fr 1fr;
+    }
+}
+
+
 .container {
   display: flex;
   flex-direction: column;
@@ -41,5 +49,10 @@ box-shadow: 2px 2px 14px gainsboro;
 .post-content {
     width: 90%;
     font-size: 1rem;
-   
+}
+
+@media only screen and (max-width: 600px) {
+    .posts {
+        grid-template-columns:  1fr 1fr;
+    }
 }
