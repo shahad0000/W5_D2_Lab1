@@ -4,13 +4,6 @@ body {
 }
 
 
-@media only screen and (max-width: 600px) {
-    .posts {
-        grid-template-columns:  1fr 1fr;
-    }
-}
-
-
 .container {
   display: flex;
   flex-direction: column;
@@ -51,8 +44,15 @@ box-shadow: 2px 2px 14px gainsboro;
     font-size: 1rem;
 }
 
-@media only screen and (max-width: 600px) {
-    .posts {
+@media only screen and (max-width: 700px) {
+    #posts {
         grid-template-columns:  1fr 1fr;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    #posts {
+        grid-template-columns: 1fr;
     }
 }
