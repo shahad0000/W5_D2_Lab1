@@ -31,12 +31,15 @@ document.addEventListener("DOMContentLoaded", () => {
         post.classList.add("card", "post");
        
         userName.innerText = data.username;
+        userName.classList.add("post-username")
         post.appendChild(userName);
 
         imgPost.src = data.img;
         post.appendChild(imgPost)
         imgPost.classList.add("img-post")
         postContent.innerText = data.textarea;
+        postContent.classList.add("post-content")
+
         post.appendChild(postContent);
 
         posts.appendChild(post)
