@@ -1,6 +1,6 @@
 body {
   padding: 0;
- 
+ background-color: rgb(239, 239, 239);
 }
 
 .container {
@@ -10,4 +10,20 @@ body {
   align-items: center;
   background-color: aliceblue;
   padding: 3rem;
+}
+#posts {
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.post {
+padding: 2rem;
+}
+
+.img-post {
+    width: 90%;
+    height: 50%;
+    margin: 2rem;
 }

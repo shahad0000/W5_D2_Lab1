@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let img = document.getElementById("img");
   let postBtn = document.getElementById("post-btn");
   let delBtn = document.getElementById("del-btn");
+  let posts = document.getElementById("posts");
+
 
   postBtn.onclick = () => {
     const post = async () => {
@@ -20,12 +22,32 @@ document.addEventListener("DOMContentLoaded", () => {
             }),
           }
         );
+        let data = await res.json()
+        console.log(data)
+        let post = document.createElement("div");
+        let imgPost = document.createElement("img");
+        let userName = document.createElement("div");
+        let postContent = document.createElement("div");
+        post.classList.add("card", "post");
+       
+        userName.innerText = data.username;
+        post.appendChild(userName);
+
+        imgPost.src = data.img;
+        post.appendChild(imgPost)
+        imgPost.classList.add("img-post")
+        postContent.innerText = data.textarea;
+        post.appendChild(postContent);
+
+        posts.appendChild(post)
+
       } catch (err) {
         console.log(err);
       }
     };
     post();
   };
+
 
   delBtn.onclick = () => {
     const del = async () => {
@@ -40,6 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(err);
       }
     };
-    del();
+    del()
   };
 });
