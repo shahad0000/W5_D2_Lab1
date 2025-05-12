@@ -8,20 +8,20 @@
     <title>CRUD Lab</title>
 </head>
 <body >
-    <div class="container ">
+    <form id="post-form" class="container ">
         <h1>Send to API</h1>
         <label class="w-100" for="name">Name: </label>
-        <input name="name" class="form-control mb-3" type="text" id="username" placeholder="Name">
+        <input required name="name" class="form-control mb-3" type="text" id="username" placeholder="Name">
         <label class="w-100" for="description">Text:</label>
-        <textarea  class="form-control mb-3" name="description" id="text" placeholder="Type your text here..."></textarea>
+        <textarea required  class="form-control mb-3" name="description" id="text" placeholder="Type your text here..."></textarea>
         <label class="w-100" for="img">Put an image url: </label>
-        <input name="img" class="form-control" type="text" id="img" placeholder="Image url...">
+        <input required name="img" class="form-control" type="text" id="img" placeholder="Image url...">
         <div class="m-5">
-            <button id="post-btn" class="btn btn-primary mx-2">Post</button>
-            <button id="del-btn" class="btn btn-danger mx-2">Delete</button>
+            <button type="submit" id="post-btn" class="btn btn-primary mx-2">Post</button>
+            <button type="button" id="del-btn" class="btn btn-danger mx-2">Delete</button>
         </div>
       
-    </div>
+    </form>
 
 <div id="posts"></div>
 
