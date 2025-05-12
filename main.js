@@ -7,8 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let posts = document.getElementById("posts");
   let form = document.getElementById("post-form");
 
-
   form.onsubmit = (e) => {
+    console.log("submitting......");
+
     e.preventDefault();
     const post = async () => {
       try {
@@ -69,14 +70,21 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   delBtn.onclick = () => {
-    const del = async () => {
+    const del = async (id) => {
       try {
         const res = await fetch(
-          "https://68219a10259dad2655afc1c9.mockapi.io/post/1",
-          {
-            method: "DELETE",
-          }
+          `https://68219a10259dad2655afc1c9.mockapi.io/post`
         );
+        const data = await res.json();
+        data.map(d => console.log(d.id))
+        for (const p of data) {
+          await fetch(
+            `https://68219a10259dad2655afc1c9.mockapi.io/post/${p.id}`,
+            {
+              method: "DELETE",
+            }
+          );
+        }
         let post = document.getElementsByClassName("post")[0];
         posts.remove(post);
       } catch (err) {
