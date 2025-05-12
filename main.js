@@ -58,6 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
             method: "DELETE",
           }
         );
+        let post = document.getElementsByClassName("post")[0];
+        posts.remove(post)
       } catch (err) {
         console.log(err);
       }

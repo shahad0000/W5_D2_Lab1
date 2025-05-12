@@ -14,16 +14,21 @@ body {
 #posts {
     padding: 3rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
 }
 
 .post {
-padding: 2rem;
+padding: 1rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+box-shadow: 2px 2px 14px gainsboro;
 }
 
 .img-post {
-    width: 90%;
+    width: 95%;
     height: 50%;
     margin: 2rem;
 }
